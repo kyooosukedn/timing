@@ -60,6 +60,21 @@ npm test
 
 ---
 
+## Deploy Configuration (configured by /setup-deploy)
+- Platform: Vercel
+- Production URL: https://timing-smoky.vercel.app
+- Deploy workflow: auto-deploy on push to main
+- Database: Neon PostgreSQL (project: flat-heart-58082678, region: aws-us-east-2)
+- Post-deploy health check: https://timing-smoky.vercel.app
+- Merge method: squash
+
+### Custom deploy hooks
+- Pre-merge: none
+- Deploy trigger: automatic on push to main (Vercel GitHub integration)
+- Schema sync: `prisma db push` runs as part of `npm run build` on every deploy
+
+---
+
 ## What's Next (suggested work)
 
 The Post CRUD feature is complete. Possible next milestones:
